@@ -66,12 +66,16 @@ section {
 
 header {
     background-image: url('../images/Header%20faded.png');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: fixed;
+    background-size: cover;
     z-index: 999;
-    height: 200px;
+    background-height: 300px;
+//    background-attachment: fixed;
+//    background-repeat: no-repeat;
+//    background-size: 100%;
+//    position: fixed;
+
+//    min-height:  100px;
+//    height: 200px;
     
 }
 
