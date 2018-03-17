@@ -3,17 +3,40 @@
 body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-/*    grid-template-columns: 80px 1fr 80px;*/
 }
-body > * {
-    grid-column: 2/12;
-/*    min-width: 0;*/
-}
+body > * { grid-column: 2/12; }
 header { grid-column: 1/-1; }
 footer { grid-column: 1/-1; }
 
+
 /*-----NAVBAR-----*/
-//header { display: flex; }
+
+header {
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.logo { 
+    grid-column: 2/3; 
+    max-height: 120px;
+    margin-top: 20px;
+}
+
+nav { grid-column: 8/12; }
+nav > a { margin-right:20px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-----SLIDESHOW-----*/
 
@@ -31,44 +54,4 @@ footer { grid-column: 1/-1; }
             object-fit: cover;
     }
 }
-
-
-
-/*
-.menuimage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    grid-column: 1/3; - take out 
-}
-*/
-
-
-
-/*OTHER*/
-/*
-.content {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    color: red;
-}
-*/
-
-
-
-
-
-
-
-/*HOLDING FOR TEXT TO BE CENTERED*/
-/*
-body > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-*/
-
 
