@@ -8,27 +8,22 @@ body > * { grid-column: 2/12; }
 header { grid-column: 1/-1; }
 footer { grid-column: 1/-1; }
 
-
+.headerbackground { grid-column: 1/-1}
 /*-----NAVBAR-----*/
 
-header {
-    display:grid;
-    grid-template-columns: repeat(12,1fr);
-}
-
-.logo { 
-    grid-column: 2/3; 
-    max-height: 120px;
-    margin-top: 20px;
-}
-
-nav { grid-column: 8/12; }
-nav > a {margin-right:20px; }
-
-
-
-
-
+//header {
+//    display:grid;
+//    grid-template-columns: repeat(12,1fr);
+//}
+//
+//.logo { 
+//    grid-column: 2/3; 
+//    max-height: 50px;
+//    margin: 20px 0px;
+//}
+//
+//nav { grid-column: 8/12; }
+//nav > a {margin-right:40px; }
 
 
 

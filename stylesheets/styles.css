@@ -13,22 +13,10 @@ header {
 footer {
   grid-column: 1/-1; }
 
+.headerbackground {
+  grid-column: 1/-1; }
+
 /*-----NAVBAR-----*/
-header {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr); }
-
-.logo {
-  grid-column: 2/3;
-  max-height: 120px;
-  margin-top: 20px; }
-
-nav {
-  grid-column: 8/12; }
-
-nav > a {
-  margin-right: 20px; }
-
 /*-----SLIDESHOW-----*/
 /*-----MENU-----*/
 .menuItems {
@@ -46,6 +34,7 @@ body {
   background-position: left bottom;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-size: 40%;
   margin: 0;
   padding: 0; }
 
@@ -66,19 +55,37 @@ section {
   font-size: 3em; }
 
 header {
-  background-image: url("../images/Header%20faded.png");
-  background-size: cover;
-  z-index: 999;
-  background-height: 300px; }
+  position: fixed;
+  z-index: 999; }
+
+.headerElements {
+  display: flex; }
+
+.headerbackground {
+  width: 100%;
+  height: 180px;
+  transform: translateY(-20px);
+  position: fixed;
+  z-index: 997; }
+
+.logo {
+  max-height: 70px;
+  margin: 20px 120px;
+  z-index: 998; }
+
+.nav {
+  margin: 30px 0px;
+  z-index: 998; }
 
 .navlink {
   font-family: "Nanum Pen Script", cursive;
   font-size: 2em;
   color: black;
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 20px; }
 
 #slideshow {
-  margin: 50px auto;
+  margin: 150px auto;
   position: relative;
   width: 100%;
   height: 300px; }
@@ -87,8 +94,8 @@ header {
   #slideshow img {
     width: 100%;
     height: 100%;
-    max-height: 400px;
-    object-fit: cover; }
+    max-height: 500px;
+    object-fit: scale-down; }
 
 p {
   font-size: 1.2em;

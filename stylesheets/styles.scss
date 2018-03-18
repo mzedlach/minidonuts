@@ -22,6 +22,7 @@ body {
     background-position: left bottom;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-size: 40%;
 
     margin: 0;
     padding: 0;
@@ -65,18 +66,33 @@ section {
 //-----NAVBAR-----
 
 header {
-    background-image: url('../images/Header%20faded.png');
-    background-size: cover;
+    position: fixed;
     z-index: 999;
-    background-height: 300px;
-//    background-attachment: fixed;
-//    background-repeat: no-repeat;
-//    background-size: 100%;
-//    position: fixed;
+}
 
-//    min-height:  100px;
-//    height: 200px;
-    
+.headerElements {
+    display:flex;
+//    justify-content: space-between;
+// This would speace the logo and nag on left and right, but, this is overridden by header having position of 'fixed'
+//How do I get the navigation to align to the right side of screen?
+}
+
+.headerbackground {
+    width: 100%;
+    height: 180px;
+    transform: translateY(-20px);
+    position: fixed;
+    z-index: 997;   
+}
+
+.logo {
+    max-height: 70px;
+    margin: 20px 120px;
+    z-index: 998;
+}
+.nav {
+    margin: 30px 0px;
+    z-index: 998;
 }
 
 
@@ -85,41 +101,8 @@ header {
     font-size: 2em;
     color: black;
     text-decoration: none;
-    
-    //ATTEMPT ONE
-//        list-style: none;
-//    margin-top: 40px; 
-//    display: flex;
-//    flex-wrap: nowrap;
-//    justify-content: flex-end;
-        
-    
-    //ATTEMPT 2
-//    font-family: $header1;
-//    font-size: 2em;
-//    color: black;
-//    text-decoration: none;
-//    padding: 40px 20px;
-    
-    //THIS MADE THE WHOLE TOP WORK WITH ATTEMPT 2
-    //    display:inline-block;
-    
-    
-        
-
-    
-    
+    margin: 20px;
 }
-
-
-
-
-
-
-
-
-
-
 
 //-----SLIDESHOW-----
 //Original guide: https://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/ ******
@@ -127,7 +110,7 @@ header {
 
 #slideshow {
     //margin and position center the slideshow. Others give paramaters as to size. 
-    margin: 50px auto; 
+    margin: 150px auto; 
     position: relative; 
     width: 100%; 
     height: 300px; 
@@ -140,8 +123,8 @@ header {
         //To fit image into confined dimensions with no overflow
         width:100%;
         height:100%;
-        max-height:400px;
-        object-fit: cover;
+        max-height:500px;
+        object-fit: scale-down;
     }
 }
 
