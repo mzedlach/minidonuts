@@ -1,14 +1,6 @@
 /*General Site Layout*/
 
-body {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-}
-body > * { grid-column: 2/12; }
-header { grid-column: 1/-1; }
-footer { grid-column: 1/-1; }
 
-.headerbackground { grid-column: 1/-1}
 /*-----NAVBAR-----*/
 
 //header {
