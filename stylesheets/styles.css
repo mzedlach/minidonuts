@@ -1,18 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Open+Sans");
-/*General Site Layout*/
-/*-----NAVBAR-----*/
-/*-----SLIDESHOW-----*/
-/*-----MENU-----*/
-.menuItems {
-  padding: 2em 3em;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, 1fr); }
-  .menuItems img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
-
 body {
   display: grid;
   grid-template-columns: repeat(12, 1fr); }
@@ -26,16 +12,16 @@ header {
 footer {
   grid-column: 1/-1; }
 
-.headerbackground {
+.header-background {
   grid-column: 1/-1; }
 
 /*-----MENU-----*/
-.menuItems {
+.menu-items {
   padding: 2em 3em;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, 1fr); }
-  .menuItems img {
+  .menu-items img {
     width: 100%;
     height: 100%;
     object-fit: cover; }
@@ -53,9 +39,9 @@ section {
   border: 2px solid gray;
   position: relative;
   margin-top: 100px;
-  padding: 30px; }
+  padding: 30px 30px 40px 30px; }
 
-.sectionTitle {
+.section-title {
   background-color: #fff;
   border-radius: 50%;
   padding: 0 20px;
@@ -70,10 +56,10 @@ header {
   position: fixed;
   z-index: 999; }
 
-.headerElements {
+.header-elements {
   display: flex; }
 
-.headerbackground {
+.header-background {
   width: 100%;
   height: 180px;
   transform: translateY(-20px);
@@ -89,7 +75,7 @@ header {
   margin: 30px 0px;
   z-index: 998; }
 
-.navlink {
+.nav-link {
   font-family: "Nanum Pen Script", cursive;
   font-size: 2em;
   color: black;
@@ -115,14 +101,31 @@ p {
   margin: 10px;
   line-height: 1.6; }
 
-.menuimage {
+.menu-items {
+  padding: 2em 3em;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 10px; }
+  .menu-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.menu-image {
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover; }
+
+.menu-name {
+  background-color: rgba(0, 0, 0, 0.13);
+  text-align: center;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 2em; }
 
 .schedule {
   display: grid;
-  grid-template-columns: 150px 200px 300px;
+  grid-template-columns: 1fr 2fr 2fr;
   grid-template-rows: 20px;
   grid-gap: 10px;
   margin: 20px 200px;
@@ -132,17 +135,18 @@ p {
 .schedule > div {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
 
 #findUs {
   margin-bottom: 50px; }
 
-.footerbackground {
+.footer-background {
   width: 100%;
   height: 210px;
   position: absolute; }
 
-.footercontent {
+.footer-content {
   position: relative;
   margin-top: 50px; }
 
