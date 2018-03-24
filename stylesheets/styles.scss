@@ -178,12 +178,18 @@ p {
     height: 90%;
     object-fit: cover;
 }
-.menu-name {
+.menu-item {
     background-color: rgba(0, 0, 0, 0.13);
     text-align: center;
-    font-family: $header1;
-    & span {
+    & p {
+        font-family: $header1;
         font-size: 100%;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+    & p:first-child {
+        font-size: 130%;
     }
 }
 
