@@ -121,8 +121,9 @@ header {
     margin: 20px;
 }
 .language {
-//    position: relative;
-    
+    font-family: $text;
+    font-size: 70%;
+    z-index: 998;
 }
 
 //-----SLIDESHOW-----

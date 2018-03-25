@@ -85,6 +85,11 @@ header {
   text-decoration: none;
   margin: 20px; }
 
+.language {
+  font-family: "Open Sans", sans-serif;
+  font-size: 70%;
+  z-index: 998; }
+
 #slideshow {
   margin: 200px auto;
   position: relative;
