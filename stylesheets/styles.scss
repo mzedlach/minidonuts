@@ -31,6 +31,7 @@ footer { grid-column: 1/-1; }
 
 .header-background { grid-column: 1/-1}
 
+
 /*-----MENU-----*/
 
 .menu-items {
@@ -45,19 +46,8 @@ footer { grid-column: 1/-1; }
     }
 }
 
-body {
-    background-image: url(../images/donutbackgroundSMALL.jpg);
-    background-position: left bottom;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 25%;
 
-    margin: 0;
-    padding: 0;
-}
-
-
-//H1 titles + Section borders
+/*-----SECTIONS + BACKGROUND-----*/
 
 section {
     border: 2px solid gray;
@@ -79,8 +69,20 @@ section {
     font-size: 150%;
 }
 
+body {
+    background-image: url(../images/donutbackgroundSMALL.jpg);
+    background-position: left bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 25%;
 
-//-----NAVBAR-----
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*-----NAVBAR-----*/
 
 header {
     position: fixed;
@@ -112,7 +114,6 @@ header {
     z-index: 998;
 }
 
-
 .nav-link {
     font-family: $header1;
     font-size: 100%;
@@ -126,7 +127,7 @@ header {
     z-index: 998;
 }
 
-//-----SLIDESHOW-----
+/*-----SLIDESHOW-----*/
 //Original guide: https://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/ ******
 //Another source, not used https://www.sitepoint.com/making-simple-image-slider-html-css-jquery/
 
@@ -150,16 +151,16 @@ header {
     }
 }
 
-//-----DESCRIPTION-----
+/*-----DESCRIPTION-----*/
 
 p {
-    font-size: 80%;
+    font-size: 60%;
     font-family: $text;
     margin: 10px;
     line-height: 1.6;
 }
 
-//-----MENU-----
+/*-----MENU-----*/
 
 .menu-items {
     padding: 2em 3em;
@@ -194,7 +195,7 @@ p {
     }
 }
 
-//-----FIND US-----
+/*-----FIND US-----*/
 
 .schedule {
     display: grid;
@@ -215,7 +216,7 @@ p {
 
 #findUs { margin-bottom: 50px;}
 
-//-----FOOTER-----
+/*-----FOOTER-----*/
 
 .footer-background {
     width: 100%;
