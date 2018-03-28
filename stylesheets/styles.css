@@ -2,6 +2,9 @@
 html {
   font-size: 30px; }
 
+/*-------------------------*/
+/*-----CSS GRID LAYOUT-----*/
+/*-------------------------*/
 body {
   display: grid;
   grid-template-columns: repeat(12, 1fr); }
@@ -19,16 +22,9 @@ footer {
   grid-column: 1/-1; }
 
 /*-----MENU-----*/
-.menu-items {
-  padding: 2em 3em;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, 1fr); }
-  .menu-items img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
-
+/*------------------*/
+/*-----STYLING------*/
+/*------------------*/
 /*-----SECTIONS + BACKGROUND-----*/
 section {
   border: 2px solid gray;
@@ -115,19 +111,24 @@ p {
 
 /*-----MENU-----*/
 .menu-items {
-  padding: 2em 3em;
   display: grid;
   grid-gap: 15px;
-  grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 5px; }
-  .menu-items img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-flow: dense; }
+
+.horizontal {
+  grid-column: span 2; }
+
+.vertical {
+  grid-row: span 2; }
+
+.big {
+  grid-column: span 2;
+  grid-row: span 2; }
 
 .menu-image {
   width: 100%;
-  height: 90%;
+  height: 100%;
   object-fit: cover; }
 
 .menu-item {
