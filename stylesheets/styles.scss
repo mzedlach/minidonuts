@@ -156,7 +156,7 @@ p {
 .menu-items {
     display:grid;
     grid-gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
 //    grid-auto-rows: 250px;
     grid-auto-flow: dense;
 }
@@ -168,8 +168,12 @@ p {
     grid-row: span 2;
 }
 .big {
-    grid-column: span 2;
+    grid-column: span 4;
     grid-row: span 2;
+}
+.customer-image{
+    grid-column: span 3;
+    grid-row: span 3;
 }
 
 //For images to fit perfectly into restricted size
@@ -183,6 +187,10 @@ p {
 .menu-item {
     background-color: rgba(0, 0, 0, 0.13);
     text-align: center;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     & p {
         font-family: $header1;
         font-size: 100%;
