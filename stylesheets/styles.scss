@@ -162,18 +162,24 @@ p {
 }
 
 .horizontal {
-    grid-column: span 2;
+    grid-column: span 6;
 }
 .vertical {
     grid-row: span 2;
+    grid-column : span 3;
+}
+.small {
+    grid-column: span 2;
+}
+.medium {
+    grid-column: span 3;
 }
 .big {
     grid-column: span 4;
-    grid-row: span 2;
 }
 .customer-image{
     grid-column: span 3;
-    grid-row: span 3;
+//    grid-row: span 3;
 }
 
 //For images to fit perfectly into restricted size
