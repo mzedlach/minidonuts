@@ -28,26 +28,21 @@ footer {
 section {
   border: 2px solid gray;
   position: relative;
-  margin-top: 100px;
+  margin-top: 30px;
   padding: 30px 30px 40px 30px; }
 
 .section-title {
   background-color: #fff;
   border-radius: 50%;
-  padding: 0 20px;
+  padding: 0 30px;
   margin-left: 20px;
   position: absolute;
-  top: -80px;
+  top: -70px;
   left: 0;
   font-family: "Nanum Pen Script", cursive;
   font-size: 150%; }
 
 body {
-  background-image: url(../images/donutbackgroundSMALL.jpg);
-  background-position: left bottom;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 25%;
   margin: 0;
   padding: 0; }
 
@@ -114,10 +109,10 @@ header {
 p {
   font-size: 60%;
   font-family: "Open Sans", sans-serif;
-  margin: 10px;
+  margin: 5px;
   line-height: 1.6; }
 
-/*-----MENU-----*/
+/*------MENU------*/
 .menu-items {
   display: grid;
   grid-gap: 15px;
@@ -178,23 +173,30 @@ p {
     font-size: 130%; }
 
 /*-----FIND US-----*/
+#findUs p {
+  margin-left: 0px; }
+
 .schedule {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
-  grid-template-rows: 20px;
-  grid-gap: 10px;
-  margin: 20px 200px;
+  grid-template-columns: 1fr;
   font-size: 60%;
   font-family: "Open Sans", sans-serif; }
 
-.schedule > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; }
+.titles,
+.day {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 10px; }
 
-#findUs {
-  margin-bottom: 50px; }
+.date {
+  grid-column: 2/4; }
+
+.hours {
+  grid-column: 4/8; }
+
+.location {
+  grid-column: 8/12; }
 
 /*-----FOOTER-----*/
 .footer-background {
@@ -237,18 +239,77 @@ footer p {
 /*Big tablet to 1200px (widths smaller than the 1140px row)*/
 @media only screen and (max-width: 1200px) {
   body {
-    background-color: red; } }
+    background-color: red; }
+
+  /*-----NAVBAR-----*/
+  /*------MENU------*/
+  /*-----FIND US-----*/
+  /*-----FOOTER-----*/
+  .horizontal-big {
+    grid-column: span 3;
+    grid-row: span 1; }
+
+  .vertical-big {
+    grid-column: span 1;
+    grid-row: span 3; }
+
+  .big {
+    grid-column: span 1;
+    grid-row: span 1; } }
 /*Small tablets to big tablets: From 768-1023px;*/
 @media only screen and (max-width: 1023px) {
   body {
-    background-color: purple; } }
+    background-color: purple; }
+
+  /*-----NAVBAR-----*/
+  /*------MENU------*/
+  /*-----FIND US-----*/
+  /*-----FOOTER-----*/ }
 /*Small phones to small tablets: from 481-767 px */
 @media only screen and (max-width: 767px) {
   body {
-    background-color: orange; } }
+    background-color: yellow; }
+
+  /*-----NAVBAR-----*/
+  /*------MENU------*/
+  .menu-items {
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr; }
+
+  .horizontal-2,
+  .horizontal-3,
+  .horizontal-big,
+  .vertical-2,
+  .vertical-3,
+  .vertical-big,
+  .small,
+  .big {
+    grid-column: span 1;
+    grid-row: span 1; }
+
+  /*-----FIND US-----*/
+  /*-----FOOTER-----*/ }
 /*Small phones: from 0-480 px */
 @media only screen and (max-width: 480px) {
   body {
-    background-color: green; } }
+    background-color: green; }
+
+  /*-----NAVBAR-----*/
+  /*------MENU------*/
+  .menu-items {
+    grid-template-columns: 1fr; }
+
+  /*-----FIND US-----*/
+  .titles {
+    display: none; }
+
+  .schedule {
+    display: block; }
+
+  .day {
+    display: block;
+    margin-bottom: 15px; }
+
+  /*-----FOOTER-----*/ }
 
 /*# sourceMappingURL=styles.css.map */
