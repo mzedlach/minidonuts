@@ -21,15 +21,13 @@
         <div class="header-elements">
             <img src="images/logo%20transparent.png" alt="Mini Donut Logo" class="logo-image">
 
-            <div class="nav">
+            <div class="nav js--nav" id="nav-links">
                 <a class="nav-link" href="#aboutUs">About&nbsp;Us</a>
                 <a class="nav-link" href="#menu" >Menu</a>
                 <a class="nav-link" href="#findUs">Find&nbsp;Us</a>
+                <a class="language" href="#">Deutsch</a>
             </div>
-            <div class="language"> 
-                <a class="language-link" href="#">English</a>
-                <a class="language-link" href="#">Deutsch</a>
-            </div>
+            <a class="mobile-nav-icon js--nav-icon"><i class="fas fa-bars"></i></a>
         </div>
     </header>
     
@@ -59,7 +57,7 @@
                 <div class="horizontal-2"><img src="images/donut12.jpg" class="menu-image"></div>
 
                 <div class="vertical-2"><img src="images/donut4.jpg" class="menu-image"></div>
-                <div class="small"><img src="images/donut2.jpg" class="menu-image"></div>
+                <div class="small mobile-remove"><img src="images/donut2.jpg" class="menu-image"></div>
                 <div class="small">
                     <div class="menu-item">
                         <p>Donuts</p>
@@ -69,7 +67,7 @@
                 <div class="vertical-2"><img src="images/donut8.jpg" class="menu-image"></div>
                 <div class="vertical-2"><img src="images/donut10.jpg" class="menu-image"></div>
                 <div class="vertical-2"><img src="images/donut9.jpg" class="menu-image"></div>
-                <div class="vertical-2"><img src="images/donut11.jpg" class="menu-image"></div>
+                <div class="vertical-2 mobile-remove"><img src="images/donut11.jpg" class="menu-image"></div>
                 <div class="vertical-2"><img src="images/donut7.jpg" class="menu-image"></div>
                 <div class="big"><img src="images/customer3.jpg" class="menu-image"></div>
                 <div class="horizontal-big"><img src="images/customer2.jpg" class="menu-image"></div>
@@ -83,7 +81,7 @@
                     </div>
                 </div>
                 <div class="vertical-2"><img src="images/icecream2.jpg" class="menu-image"></div>
-                <div class="big"><img src="images/customer1.jpg" class="menu-image"></div>
+                <div class="big mobile-remove"><img src="images/customer1.jpg" class="menu-image"></div>
                 
                 <div class="small">
                     <div class="menu-item">
@@ -142,6 +140,35 @@
                 <p class="credits">Made with a belly full of donuts by <a href="marialach.com">Maria Lach</a>. Copyright &copy; 2018</p>
             </div>
         </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+        //    Mobile Navigation - Open/Close Nav
+ 
+            
+//            function mobileNavOpen() {
+//                document.getElementById("nav").setAttribute("class", "nav-mobile");                
+//            };
+
+            
+//            THIS
+            $('.js--nav-icon').click(function() {
+                var nav = $('.js--nav');
+                nav.slideToggle(200);
+            });
+                
+//            NOT THIS
+//                var icon = $('.js--nav-icon i');
+//
+//                nav.slideToggle(200);
+//                if (icon.hasClass('fa-bars')) {
+//                    icon.addClass('fa-times');
+//                    icon.removeClass('fa-bars');
+//                } else {
+//                    icon.addClass('fa-bars');
+//                    icon.removeClass('fa-times');
+//                };
+        </script>
     </body>
 </html>
       

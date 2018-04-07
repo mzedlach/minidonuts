@@ -6,16 +6,10 @@
 
 $text: 'Open Sans', sans-serif;
 $header1: 'Nanum Pen Script', cursive;
-
-$pink: #E78E80;
-$yellow: #FFBC0A;
-$orange: #EC7D10;
 $headerfooter: #898989;
 
 
-html {
-    font-size: 30px;
-}
+html { font-size: 30px; }
 /*-------------------------*/
 /*-----CSS GRID LAYOUT-----*/
 /*-------------------------*/
@@ -29,6 +23,7 @@ header { grid-column: 1/-1; }
 footer { grid-column: 1/-1; }
 
 .header-background { grid-column: 1/-1; }
+.footer-background { grid-column: 1/-1; }
 
 
 /*------------------*/
@@ -42,6 +37,7 @@ section {
     border: 2px solid gray;
     position: relative;
     margin-top: 30px;
+    margin-bottom: 10px;
     padding: 30px 30px 40px 30px;
     }
 
@@ -58,12 +54,6 @@ section {
 }
 
 body {
-//    background-image: url(../images/donutbackground-whiteedges.jpg);
-//    background-position: left bottom;
-//    background-attachment: fixed;
-//    background-repeat: no-repeat;
-//    background-size: 25%;
-
     margin: 0;
     padding: 0;
 }
@@ -85,7 +75,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 .logo-image {
@@ -99,24 +89,25 @@ header {
 
 .nav-link {
     font-family: $header1;
-    font-size: 100%;
+    font-size: 120%;
     color: black;
     text-decoration: none;
     margin-left: 40px;
 }
 .language {
-    z-index: 999;
-    display:flex;
-    flex-direction: column;
-}
-.language-link {
-    font-family: $text;
-    font-size: 50%;
-    text-decoration: none;
+    font-family: $header1;
+    font-size: 120%;
     color: black;
-    margin-top: 5px;
-    
+    margin-left: 40px;
 }
+
+/*Mobile Navigation */
+.mobile-nav-icon {
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+}
+.mobile-nav-icon i { font-size: 120%; }
 
 /*-----SLIDESHOW-----*/
 //Original guide: https://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/ ******
@@ -124,7 +115,7 @@ header {
 
 #slideshow {
     //margin and position center the slideshow. Others give paramaters as to size. 
-    margin: 200px auto; 
+    margin: 300px auto 130px auto; 
     position: relative; 
     width: 100%; 
     height: 300px; 
@@ -132,12 +123,14 @@ header {
     > div {
         //    to allow image to disappear behind newly created child
         position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
     }
     & img {
         //To fit image into confined dimensions with no overflow
-        width:100%;
-        height:100%;
-        max-height:500px;
+        width: 100%;
+        height: 100%;
+        max-height: 500px;
         object-fit: scale-down;
     }
 }
@@ -155,10 +148,11 @@ p {
 
 //CSS grid display 
 .menu-items {
-    display:grid;
+    display: grid;
     grid-gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-flow: dense;
+    margin-top: 20px
 }
 
 .horizontal-2{
@@ -206,7 +200,7 @@ p {
     background-color: rgba(0, 0, 0, 0.13);
     text-align: center;
     height: 100%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     & p {
@@ -223,7 +217,7 @@ p {
 
 /*-----FIND US-----*/
 
-#findUs p { margin-left:0px;}
+#findUs p { margin-left: 0px; }
 .schedule {
     display: grid;
     grid-template-columns: 1fr;
@@ -232,9 +226,9 @@ p {
 }
 .titles, 
 .day {
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap:10px;
+    grid-gap: 10px;
     margin-bottom: 10px;
 }
 .date { grid-column: 2/4; }
@@ -246,41 +240,34 @@ p {
 .footer-background {
     width: 100%;
     height: 210px;
-    position:absolute;
+    position: absolute;
 }
 
 .footer-content { 
-    position:relative;
+    position: relative;
     margin-top: 50px;
 }
 
 .footer-links {
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-social-links {
-    margin:0px 20px;
+    margin: 0px 20px;
     font-size: 200%;
 }
 
-.fa-facebook-square {
-    color: #3B5998;
-}
-.fa-instagram {
-    color: #fb3958;
-}
-.fa-twitter-square {
-    color: #0084b4;
-}
+.fa-facebook-square { color: #3B5998; }
+.fa-instagram { color: #fb3958; }
+.fa-twitter-square { color: #0084b4; }
 
-footer p {
-    text-align: center;
-//    font-size: 95%;
+footer p { text-align: center; }
+.credits { 
+    font-size: 50%; 
+    margin-bottom: 10px;
 }
-.credits { font-size: 50%; 
-margin-bottom: 10px;}
 
 
 /*-------------------------*/
@@ -289,19 +276,11 @@ margin-bottom: 10px;}
 
 /*Big tablet to 1200px (widths smaller than the 1140px row)*/
 @media only screen and (max-width:1200px) {
-    body {background-color:red;}
-    
-/*-----NAVBAR-----*/
 
-/*------MENU------*/
-    
-/*-----FIND US-----*/
-    
-/*-----FOOTER-----*/
-
+    p { font-size: 65%; }
     
     .horizontal-big {
-        grid-column: span 3;
+        grid-column: span 2;
         grid-row: span 1;
     }
     .vertical-big {
@@ -312,27 +291,79 @@ margin-bottom: 10px;}
         grid-column: span 1;
         grid-row: span 1;
     }
-    
-    
 }
 
 /*Small tablets to big tablets: From 768-1023px;*/
 @media only screen and (max-width:1023px) {
-    body {background-color:purple;}
-    
-/*-----NAVBAR-----*/
 
-/*------MENU------*/
-    
-/*-----FIND US-----*/
-    
-/*-----FOOTER-----*/
+    .nav-link,
+    .language{ font-size: 110%;}
+
+    /*------HEADER------*/
+    .header-background { 
+        grid-column: auto/auto;
+        width: auto;
+        transform: translate(0px,-20px);
+    }
+    .logo-image {
+        max-height: 80px;
+    }
+    #slideshow {
+        margin: 210px auto 100px auto;  
+        height: 360px; 
+    }
+    .footer-background { object-fit: none; }
 }
 
 /*Small phones to small tablets: from 481-767 px */
 @media only screen and (max-width:767px) {
-    body {background-color:yellow;}
-/*-----NAVBAR-----*/
+    body { background-color:yellow; }
+    
+    html { font-size: 28px;}
+    
+    section { padding: 30px 5px 10px 5px; }
+    
+    /*------HEADER------*/
+    header { height: 120px; }
+    
+    .header-background { 
+        transform: translate(0px,0px);
+        height: 120px;
+    }
+    .logo-image {
+        max-height: 70px;
+        margin-left: 30px;
+        padding-top: 5px;
+    }
+    .header-elements {
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 0px;
+        padding-top: 5px;
+    }
+    #slideshow {
+        margin: 120px auto 60px auto;  
+        height: 360px; 
+    }
+    
+    /*Mobile Navigation*/
+    
+    .mobile-nav-icon {
+        display: block;
+        z-index: 999;
+        padding-right: 30px;
+        padding-top: 20px;
+    }
+    .nav {
+        height: 80px;
+        display: none;
+        margin-left: 0;
+        padding-top: 15px
+    }    
+    .nav a {
+        font-size: 70%;
+        font-family: $text;
+    }
 
     /*------MENU------*/
     
@@ -352,29 +383,64 @@ margin-bottom: 10px;}
         grid-column: span 1;
         grid-row: span 1;
     }
-/*-----FIND US-----*/
-    
-/*-----FOOTER-----*/
 }
 
 /*Small phones: from 0-480 px */
 @media only screen and (max-width:480px) {
-    body {background-color:green;}
+    body {background-color:white;}
     
-/*-----NAVBAR-----*/
-
+    html { font-size: 25px;}
+    
+    body > * { grid-column: 1/-1; }
+    
+    section {
+        margin: 30px 5px 0px 5px;
+        border: none;
+        border-top: 2px solid gray;
+    }
+    #slideshow {
+        margin: 70px auto 30px auto;  
+        height: 290px; 
+    }
+    /*------HEADER------*/
+    header {
+        height: 70px;
+    }
+    .header-background { 
+        transform: translate(0px,-20px);
+        height: 100px;
+    }
+    .logo-image {
+        max-height: 40px;
+        margin-left: 20px;
+    }
+    .mobile-nav-icon {
+//        margin-right: 20px; 
+        font-size: 80%;
+        padding-right: 20px;
+        padding-top: 10px;
+    }
+    .nav a {
+        font-size: 80%;
+        display: block;
+        padding: 5px 5px;
+        background-color: #fcae53;
+        color: black;
+    }
+    
     /*------MENU------*/
     .menu-items {
         grid-template-columns: 1fr;
     }
+    .mobile-remove {
+        display: none;
+    }
     /*-----FIND US-----*/
-    .titles { display:none; }
+    .titles { display: none; }
     .schedule { display: block; }
     .day { 
-        display:block;
-        margin-bottom:15px;}
-    
-/*-----FOOTER-----*/
+        display: block;
+        margin-bottom: 15px;}
 }
 
 

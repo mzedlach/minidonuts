@@ -21,6 +21,9 @@ footer {
 .header-background {
   grid-column: 1/-1; }
 
+.footer-background {
+  grid-column: 1/-1; }
+
 /*------------------*/
 /*-----STYLING------*/
 /*------------------*/
@@ -29,6 +32,7 @@ section {
   border: 2px solid gray;
   position: relative;
   margin-top: 30px;
+  margin-bottom: 10px;
   padding: 30px 30px 40px 30px; }
 
 .section-title {
@@ -74,31 +78,36 @@ header {
 
 .nav-link {
   font-family: "Nanum Pen Script", cursive;
-  font-size: 100%;
+  font-size: 120%;
   color: black;
   text-decoration: none;
   margin-left: 40px; }
 
 .language {
-  z-index: 999;
-  display: flex;
-  flex-direction: column; }
-
-.language-link {
-  font-family: "Open Sans", sans-serif;
-  font-size: 50%;
-  text-decoration: none;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 120%;
   color: black;
-  margin-top: 5px; }
+  margin-left: 40px; }
+
+/*Mobile Navigation */
+.mobile-nav-icon {
+  cursor: pointer;
+  display: none;
+  z-index: 999; }
+
+.mobile-nav-icon i {
+  font-size: 120%; }
 
 /*-----SLIDESHOW-----*/
 #slideshow {
-  margin: 200px auto;
+  margin: 300px auto 130px auto;
   position: relative;
   width: 100%;
   height: 300px; }
   #slideshow > div {
-    position: absolute; }
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
   #slideshow img {
     width: 100%;
     height: 100%;
@@ -117,7 +126,8 @@ p {
   display: grid;
   grid-gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-flow: dense; }
+  grid-auto-flow: dense;
+  margin-top: 20px; }
 
 .horizontal-2 {
   grid-column: span 2;
@@ -238,15 +248,11 @@ footer p {
 /*-------------------------*/
 /*Big tablet to 1200px (widths smaller than the 1140px row)*/
 @media only screen and (max-width: 1200px) {
-  body {
-    background-color: red; }
+  p {
+    font-size: 65%; }
 
-  /*-----NAVBAR-----*/
-  /*------MENU------*/
-  /*-----FIND US-----*/
-  /*-----FOOTER-----*/
   .horizontal-big {
-    grid-column: span 3;
+    grid-column: span 2;
     grid-row: span 1; }
 
   .vertical-big {
@@ -258,19 +264,76 @@ footer p {
     grid-row: span 1; } }
 /*Small tablets to big tablets: From 768-1023px;*/
 @media only screen and (max-width: 1023px) {
-  body {
-    background-color: purple; }
+  .nav-link,
+  .language {
+    font-size: 110%; }
 
-  /*-----NAVBAR-----*/
-  /*------MENU------*/
-  /*-----FIND US-----*/
-  /*-----FOOTER-----*/ }
+  /*------HEADER------*/
+  .header-background {
+    grid-column: auto/auto;
+    width: auto;
+    transform: translate(0px, -20px); }
+
+  .logo-image {
+    max-height: 80px; }
+
+  #slideshow {
+    margin: 210px auto 100px auto;
+    height: 360px; }
+
+  .footer-background {
+    object-fit: none; } }
 /*Small phones to small tablets: from 481-767 px */
 @media only screen and (max-width: 767px) {
   body {
     background-color: yellow; }
 
-  /*-----NAVBAR-----*/
+  html {
+    font-size: 28px; }
+
+  section {
+    padding: 30px 5px 10px 5px; }
+
+  /*------HEADER------*/
+  header {
+    height: 120px; }
+
+  .header-background {
+    transform: translate(0px, 0px);
+    height: 120px; }
+
+  .logo-image {
+    max-height: 70px;
+    margin-left: 30px;
+    padding-top: 5px; }
+
+  .header-elements {
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 0px;
+    padding-top: 5px; }
+
+  #slideshow {
+    margin: 120px auto 60px auto;
+    height: 360px; }
+
+  /*Mobile Navigation*/
+  .mobile-nav-icon {
+    display: block;
+    z-index: 999;
+    padding-right: 30px;
+    padding-top: 20px; }
+
+  .nav {
+    height: 80px;
+    display: none;
+    margin-left: 0;
+    padding-top: 15px; }
+
+  .nav a {
+    font-size: 70%;
+    font-family: "Open Sans", sans-serif; }
+
   /*------MENU------*/
   .menu-items {
     grid-gap: 5px;
@@ -285,19 +348,57 @@ footer p {
   .small,
   .big {
     grid-column: span 1;
-    grid-row: span 1; }
-
-  /*-----FIND US-----*/
-  /*-----FOOTER-----*/ }
+    grid-row: span 1; } }
 /*Small phones: from 0-480 px */
 @media only screen and (max-width: 480px) {
   body {
-    background-color: green; }
+    background-color: white; }
 
-  /*-----NAVBAR-----*/
+  html {
+    font-size: 25px; }
+
+  body > * {
+    grid-column: 1/-1; }
+
+  section {
+    margin: 30px 5px 0px 5px;
+    border: none;
+    border-top: 2px solid gray; }
+
+  #slideshow {
+    margin: 70px auto 30px auto;
+    height: 290px; }
+
+  /*------HEADER------*/
+  header {
+    height: 70px; }
+
+  .header-background {
+    transform: translate(0px, -20px);
+    height: 100px; }
+
+  .logo-image {
+    max-height: 40px;
+    margin-left: 20px; }
+
+  .mobile-nav-icon {
+    font-size: 80%;
+    padding-right: 20px;
+    padding-top: 10px; }
+
+  .nav a {
+    font-size: 80%;
+    display: block;
+    padding: 5px 5px;
+    background-color: #fcae53;
+    color: black; }
+
   /*------MENU------*/
   .menu-items {
     grid-template-columns: 1fr; }
+
+  .mobile-remove {
+    display: none; }
 
   /*-----FIND US-----*/
   .titles {
@@ -308,8 +409,6 @@ footer p {
 
   .day {
     display: block;
-    margin-bottom: 15px; }
-
-  /*-----FOOTER-----*/ }
+    margin-bottom: 15px; } }
 
 /*# sourceMappingURL=styles.css.map */
