@@ -7,11 +7,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--        Description in searches-->
         <meta name="description" content="Welcome to our family-owned donut stand. Drop by today to see and taste all of the sweet treats we have to offer!">
-<!--        Style Sheets-->
+
         <link rel="stylesheet" href="stylesheets/styles.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+<!--        Favicons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/images/favicons/site.webmanifest">
+        <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="scripts.js"></script>
+        <script src="https://use.fontawesome.com/01e63695dc.js"></script>
         <title>Mini-Donuts</title>
     </head>
 
@@ -27,7 +39,7 @@
                 <a class="nav-link" href="#findUs">Find&nbsp;Us</a>
                 <a class="language" href="#">Deutsch</a>
             </div>
-            <a class="mobile-nav-icon js--nav-icon"><i class="fas fa-bars"></i></a>
+            <a class="mobile-nav-icon js--nav-icon"><i class="fa fa-bars" aria-hidden="true"></i></a>
         </div>
     </header>
     
@@ -133,42 +145,13 @@
                 
                 <p>Contact Us</p>
                 <div class="footer-links">              
-                    <a href="FACEBOOK" class="footer-social-links"><i class="fab fa-facebook-square"></i></a>
-                    <a href="INSTAGRAM" class="footer-social-links"><i class="fab fa-instagram"></i></a>
-                    <a href="TWITTER" class="footer-social-links"><i class="fab fa-twitter-square"></i></a>
+                    <a href="FACEBOOK" class="footer-social-links"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="TWITTER" class="footer-social-links"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
                 </div>
                 <p class="credits">Made with a belly full of donuts by <a href="marialach.com">Maria Lach</a>. Copyright &copy; 2018</p>
             </div>
         </footer>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script>
-        //    Mobile Navigation - Open/Close Nav
- 
-            
-//            function mobileNavOpen() {
-//                document.getElementById("nav").setAttribute("class", "nav-mobile");                
-//            };
 
-            
-//            THIS
-            $('.js--nav-icon').click(function() {
-                var nav = $('.js--nav');
-                nav.slideToggle(200);
-            });
-                
-//            NOT THIS
-//                var icon = $('.js--nav-icon i');
-//
-//                nav.slideToggle(200);
-//                if (icon.hasClass('fa-bars')) {
-//                    icon.addClass('fa-times');
-//                    icon.removeClass('fa-bars');
-//                } else {
-//                    icon.addClass('fa-bars');
-//                    icon.removeClass('fa-times');
-//                };
-        </script>
     </body>
 </html>
       

@@ -285,9 +285,6 @@ footer p {
     object-fit: none; } }
 /*Small phones to small tablets: from 481-767 px */
 @media only screen and (max-width: 767px) {
-  body {
-    background-color: yellow; }
-
   html {
     font-size: 28px; }
 
@@ -351,9 +348,6 @@ footer p {
     grid-row: span 1; } }
 /*Small phones: from 0-480 px */
 @media only screen and (max-width: 480px) {
-  body {
-    background-color: white; }
-
   html {
     font-size: 25px; }
 

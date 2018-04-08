@@ -317,7 +317,6 @@ footer p { text-align: center; }
 
 /*Small phones to small tablets: from 481-767 px */
 @media only screen and (max-width:767px) {
-    body { background-color:yellow; }
     
     html { font-size: 28px;}
     
@@ -387,7 +386,6 @@ footer p { text-align: center; }
 
 /*Small phones: from 0-480 px */
 @media only screen and (max-width:480px) {
-    body {background-color:white;}
     
     html { font-size: 25px;}
     
