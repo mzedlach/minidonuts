@@ -4,6 +4,8 @@
 //    Font Variables
 //    Fonts type
 
+//Thank you Phillip at Pixelflips (pixelflips.com) for your blog on fixed headers and navigating to sections in a page
+
 $text: 'Open Sans', sans-serif;
 $header1: 'Nanum Pen Script', cursive;
 $headerfooter: #898989;
@@ -57,7 +59,13 @@ body {
     margin: 0;
     padding: 0;
 }
-
+//Anchor for nav links to accomodate for fixed header
+.anchor{
+  display: block;
+  height: 160px; /*same height as header*/
+  margin-top: -160px; /*same height as header*/
+  visibility: hidden;
+}
 /*-----NAVBAR-----*/
 
 header {
@@ -276,8 +284,13 @@ footer p { text-align: center; }
 
 /*Big tablet to 1200px (widths smaller than the 1140px row)*/
 @media only screen and (max-width:1200px) {
-
+    
     p { font-size: 65%; }
+    
+    .anchor{
+      height: 140px; 
+      margin-top: -140px; 
+    }
     
     .horizontal-big {
         grid-column: span 2;
@@ -295,7 +308,11 @@ footer p { text-align: center; }
 
 /*Small tablets to big tablets: From 768-1023px;*/
 @media only screen and (max-width:1023px) {
-
+    
+    .anchor{
+      height: 130px; 
+      margin-top: -130px; 
+    }
     .nav-link,
     .language{ font-size: 110%;}
 
@@ -312,6 +329,10 @@ footer p { text-align: center; }
         margin: 210px auto 100px auto;  
         height: 360px; 
     }
+    .horizontal-big {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
     .footer-background { object-fit: none; }
 }
 
@@ -322,6 +343,10 @@ footer p { text-align: center; }
     
     section { padding: 30px 5px 10px 5px; }
     
+    .anchor{
+      height: 100px; 
+      margin-top: -100px; 
+    }
     /*------HEADER------*/
     header { height: 120px; }
     
@@ -386,7 +411,12 @@ footer p { text-align: center; }
 
 /*Small phones: from 0-480 px */
 @media only screen and (max-width:480px) {
+    body {background-color: pink;}
     
+    .anchor{
+      height: 60px; 
+      margin-top: -60px; 
+    }
     html { font-size: 25px;}
     
     body > * { grid-column: 1/-1; }
