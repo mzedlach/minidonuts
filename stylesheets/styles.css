@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Caveat+Brush|Open+Sans&subset=latin-ext");
 html {
   font-size: 30px; }
 
@@ -43,7 +43,7 @@ section {
   position: absolute;
   top: -70px;
   left: 0;
-  font-family: "Nanum Pen Script", cursive;
+  font-family: "Caveat Brush", cursive;
   font-size: 150%; }
 
 body {
@@ -71,8 +71,14 @@ header {
   position: fixed; }
 
 .header-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 10px; }
 
@@ -85,14 +91,14 @@ header {
   margin-left: 20%; }
 
 .nav-link {
-  font-family: "Nanum Pen Script", cursive;
+  font-family: "Caveat Brush", cursive;
   font-size: 120%;
   color: black;
   text-decoration: none;
   margin-left: 40px; }
 
 .language {
-  font-family: "Nanum Pen Script", cursive;
+  font-family: "Caveat Brush", cursive;
   font-size: 120%;
   color: black;
   margin-left: 40px; }
@@ -115,11 +121,13 @@ header {
   #slideshow > div {
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }
   #slideshow img {
     width: 100%;
     height: 100%;
     max-height: 500px;
+    -o-object-fit: scale-down;
     object-fit: scale-down; }
 
 /*-----DESCRIPTION-----*/
@@ -172,17 +180,25 @@ p {
 .menu-image {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover; }
 
 .menu-item {
   background-color: rgba(0, 0, 0, 0.13);
   text-align: center;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center; }
   .menu-item p {
-    font-family: "Nanum Pen Script", cursive;
+    font-family: "Caveat Brush", cursive;
     font-size: 100%;
     margin: 0;
     padding: 0;
@@ -227,8 +243,14 @@ p {
   margin-top: 50px; }
 
 .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center; }
 
 .footer-social-links {
@@ -288,6 +310,7 @@ footer p {
   .header-background {
     grid-column: auto/auto;
     width: auto;
+    -webkit-transform: translate(0px, -20px);
     transform: translate(0px, -20px); }
 
   .logo-image {
@@ -302,6 +325,7 @@ footer p {
     grid-row: span 1; }
 
   .footer-background {
+    -o-object-fit: none;
     object-fit: none; } }
 /*Small phones to small tablets: from 481-767 px */
 @media only screen and (max-width: 767px) {
@@ -320,6 +344,7 @@ footer p {
     height: 120px; }
 
   .header-background {
+    -webkit-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
     height: 120px; }
 
@@ -329,7 +354,11 @@ footer p {
     padding-top: 5px; }
 
   .header-elements {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     margin-top: 0px;
     padding-top: 5px; }
@@ -372,9 +401,6 @@ footer p {
     grid-row: span 1; } }
 /*Small phones: from 0-480 px */
 @media only screen and (max-width: 480px) {
-  body {
-    background-color: pink; }
-
   .anchor {
     height: 60px;
     margin-top: -60px; }
@@ -399,6 +425,7 @@ footer p {
     height: 70px; }
 
   .header-background {
+    -webkit-transform: translate(0px, -20px);
     transform: translate(0px, -20px);
     height: 100px; }
 

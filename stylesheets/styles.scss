@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Open+Sans');
-
-//Photo by Nathan Dumlao on Unsplash
-//    Font Variables
-//    Fonts type
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush|Open+Sans&subset=latin-ext');
 
 //Thank you Phillip at Pixelflips (pixelflips.com) for your blog on fixed headers and navigating to sections in a page
+//Thank you Chris Coyier for your slideshow snippet on css-tricks
 
 $text: 'Open Sans', sans-serif;
-$header1: 'Nanum Pen Script', cursive;
+$header1: 'Caveat Brush', cursive;
 $headerfooter: #898989;
 
 
@@ -80,8 +77,14 @@ header {
     position: fixed;
 }
 .header-elements {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-top: 10px;
 }
@@ -132,6 +135,7 @@ header {
         //    to allow image to disappear behind newly created child
         position: absolute;
         top: 50%;
+        -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
     }
     & img {
@@ -139,6 +143,7 @@ header {
         width: 100%;
         height: 100%;
         max-height: 500px;
+        -o-object-fit: scale-down;
         object-fit: scale-down;
     }
 }
@@ -200,6 +205,7 @@ p {
 .menu-image {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -208,8 +214,15 @@ p {
     background-color: rgba(0, 0, 0, 0.13);
     text-align: center;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     & p {
         font-family: $header1;
@@ -257,8 +270,14 @@ p {
 }
 
 .footer-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -320,6 +339,7 @@ footer p { text-align: center; }
     .header-background { 
         grid-column: auto/auto;
         width: auto;
+        -webkit-transform: translate(0px,-20px);
         transform: translate(0px,-20px);
     }
     .logo-image {
@@ -333,7 +353,7 @@ footer p { text-align: center; }
         grid-column: span 1;
         grid-row: span 1;
     }
-    .footer-background { object-fit: none; }
+    .footer-background { -o-object-fit: none; object-fit: none; }
 }
 
 /*Small phones to small tablets: from 481-767 px */
@@ -351,6 +371,7 @@ footer p { text-align: center; }
     header { height: 120px; }
     
     .header-background { 
+        -webkit-transform: translate(0px,0px); 
         transform: translate(0px,0px);
         height: 120px;
     }
@@ -360,7 +381,11 @@ footer p { text-align: center; }
         padding-top: 5px;
     }
     .header-elements {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
         margin-top: 0px;
         padding-top: 5px;
@@ -411,7 +436,6 @@ footer p { text-align: center; }
 
 /*Small phones: from 0-480 px */
 @media only screen and (max-width:480px) {
-    body {background-color: pink;}
     
     .anchor{
       height: 60px; 
@@ -435,6 +459,7 @@ footer p { text-align: center; }
         height: 70px;
     }
     .header-background { 
+        -webkit-transform: translate(0px,-20px); 
         transform: translate(0px,-20px);
         height: 100px;
     }
